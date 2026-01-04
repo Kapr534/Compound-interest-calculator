@@ -29,6 +29,7 @@ export default function Input({value, name, unit, label, onInputChange}: InputPr
                     />
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium pointer-events-none">
                     {unit}
+                    test
                 </span>
             </div>
         </div>
