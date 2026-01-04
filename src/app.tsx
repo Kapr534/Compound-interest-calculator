@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import './styles/app.css'
 import CalculatorForm from "./features/CalculatorForm.tsx";
-import calcCompoundInterest from "./utils/calccompoundinterest.ts";
+import { calcCompoundInterest } from "./utils/calccompoundinterest.ts";
 
 export default function App() {
     const [inputValues, setInputValues] = useState({

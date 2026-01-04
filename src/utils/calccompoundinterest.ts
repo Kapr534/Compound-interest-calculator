@@ -1,28 +1,38 @@
 
 
-export default function calcCompoundInterest(
+export function calcCompoundInterest(
     initialDeposit: number,
     addedMonthly: number,
     interestRate: number,
     years: number
 ) {
     const monthlyRate: number = interestRate /100 / 12;
-    const totalMonths: number = years * 12;
+    const currentYear: number = new Date().getFullYear();
 
-    // Compound interest formula
-    const initialGrowth = initialDeposit * (1 + monthlyRate) ** totalMonths;
+    let total = initialDeposit;
+    let totalDeposit = initialDeposit;
+    const yearlyBreakDown = [];
 
-    // Monthly added compound interest formula
-    const monthlyGrowth = monthlyRate > 0
-        ? addedMonthly * ((1 + monthlyRate) ** totalMonths - 1) / monthlyRate
-        : addedMonthly * totalMonths;
+    for (let y = 1; y <= years; y++) {
+        for (let m = 1; m <= 12; m++) {
+            total *= (1 + monthlyRate);
+            total += addedMonthly;
+            totalDeposit += addedMonthly;
+        }
 
-    const total = Math.round(initialGrowth + monthlyGrowth);
-    const totalDeposit = initialDeposit + (addedMonthly * totalMonths);
+        yearlyBreakDown.push({
+            year: currentYear + y,
+            total: Math.round(total),
+            totalDeposit: Math.round(totalDeposit),
+            totalInterest: Math.round(total - totalDeposit),
+        })
+    }
+
 
     return {
-        total: total,
-        totalDeposit: totalDeposit,
-        totalInterest: total - totalDeposit,
+        total: Math.round(total),
+        totalDeposit: Math.round(totalDeposit),
+        totalInterest: Math.round(total - totalDeposit),
+        yearlyBreakDown: yearlyBreakDown,
     }
 }
