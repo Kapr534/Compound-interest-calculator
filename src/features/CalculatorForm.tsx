@@ -26,10 +26,10 @@ export default function CalculatorForm(props: CalculatorFormProps) {
     }
 
     const inputs: InputProps[] = [
-        {value: props.inputValues.deposit,name: "deposit",unit: "Kč", label: "Počáteční jednorázová investice", onInputChange: props.onInputChange},
-        {value: props.inputValues.monthlyAdded,name: "monthlyAdded",unit: "Kč", label: "Pravidelná měsíční investice", onInputChange: props.onInputChange},
-        {value: props.inputValues.interestRate,name: "interestRate",unit: "% pa", label: "Předpokládaná roční úroková sazba (%)", onInputChange: props.onInputChange},
-        {value: props.inputValues.years,name: "years",unit: "let", label: "Na kolik let", onInputChange: props.onInputChange},
+        {value: props.inputValues.deposit,name: "deposit", maxValue: 100000000,unit: "Kč", label: "Počáteční jednorázová investice", onInputChange: props.onInputChange},
+        {value: props.inputValues.monthlyAdded,name: "monthlyAdded", maxValue: 10000000,unit: "Kč", label: "Pravidelná měsíční investice", onInputChange: props.onInputChange},
+        {value: props.inputValues.interestRate,name: "interestRate", maxValue: 100,unit: "% pa", label: "Předpokládaná roční úroková sazba (%)", onInputChange: props.onInputChange},
+        {value: props.inputValues.years,name: "years", maxValue: 100,unit: "let", label: "Na kolik let", onInputChange: props.onInputChange},
     ];
 
     const btns: BtnProps[] = [

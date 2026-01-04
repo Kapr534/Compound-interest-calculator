@@ -39,10 +39,10 @@ export default function App() {
         <div className="min-h-screen bg-[#f8fafc] flex items-center justify-center p-4 antialiased">
             <div className="max-w-5xl w-full bg-white rounded-[2rem] shadow-2xl shadow-slate-200/60 overflow-hidden border border-slate-100 grid md:grid-cols-2">
 
-                {/* Levá strana - Formulář */}
+                {/* Left side - Form */}
                 <div className="p-8 md:p-12 border-b md:border-b-0 md:border-r border-slate-100">
                     <div className="mb-10">
-                        <h1 className="text-3xl font-black text-slate-900 tracking-tight">Kalkulačka úroků</h1>
+                        <h1 className="text-3xl font-black text-slate-900 tracking-tight">Investiční kalkulačka</h1>
                         <p className="text-slate-500 mt-2 font-medium">Naplánujte si svou finanční budoucnost.</p>
                     </div>
 
@@ -54,7 +54,7 @@ export default function App() {
                     />
                 </div>
 
-                {/* Pravá strana - Výsledky */}
+                {/* Right side - Results */}
                 <div className="p-8 md:p-12 bg-slate-50/50 flex flex-col justify-center">
                     <div className="space-y-8">
                         <div className="bg-indigo-600 p-8 rounded-[2rem] text-white shadow-xl shadow-indigo-200">
