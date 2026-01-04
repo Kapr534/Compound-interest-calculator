@@ -5,10 +5,10 @@ import calcCompoundInterest from "./utils/calccompoundinterest.ts";
 
 export default function App() {
     const [inputValues, setInputValues] = useState({
-        deposit: "",
-        monthlyAdded: "",
-        interestRate: "",
-        years: "",
+        deposit: 0,
+        monthlyAdded: 0,
+        interestRate: 0,
+        years: 0,
     })
     const [calcValues, setCalcValues] = useState({
         total: 0,

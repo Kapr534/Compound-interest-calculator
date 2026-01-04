@@ -1,10 +1,10 @@
-import { expect, test, describe, it } from 'vitest';
+import { expect, test, describe } from 'vitest';
 import calcCompoundInterest from "../utils/calccompoundinterest.ts";
 
 
 describe('Function calcCompoundInterest', () => {
 
-    test('standart input', () => {
+    test('standard input', () => {
         const initialDeposit = 100000;
         const addedMonthly = 5000;
         const interestRate = 9.3;

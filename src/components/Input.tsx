@@ -19,6 +19,7 @@ export default function Input({value, name, unit, label, onInputChange}: InputPr
                            text-slate-900 outline-none
                             focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10
                             transition-all duration-200 shadow-sm"
+                    min={0}
                     type="number"
                     value={value}
                     onChange={(e) => {
