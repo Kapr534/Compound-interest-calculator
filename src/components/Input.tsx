@@ -12,22 +12,22 @@ export default function Input({value, maxValue,name, unit, label, onInputChange}
     const formattedValue = value ? value.toLocaleString('cs-CZ') : (value === 0 ? "0" : "");
 
     return (
-        <div className="flex flex-col gap-2">
-            <label className="text-sm font-bold text-slate-700 ml-1">
+        <div className="group">
+            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 block group-focus-within:text-teal-600 transition-colors">
                 {label}
             </label>
-            <div className="relative">
+            <div className="relative flex items-center">
                 <input
-                    className="w-full pl-4 pr-12 py-3 bg-slate-50 border border-slate-200 rounded-2xl
-                           text-slate-900 outline-none
-                            focus:bg-white focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10
-                            transition-all duration-200 shadow-sm"
+                    className="w-full pl-4 pr-16 py-3.5 bg-white border border-slate-200 rounded-xl
+                           text-slate-900 font-semibold outline-none
+                            focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10
+                            transition-all duration-200 shadow-sm group-hover:border-slate-300"
 
                     type="text"
                     value={formattedValue}
 
                     onChange={(e) => {
-                        const rawValue = e.target.value.replace(/\s/g, "");    //remove " "
+                        const rawValue = e.target.value.replace(/\s/g, "");
 
                         if (rawValue === "") {
                             onInputChange(name, 0);
@@ -36,12 +36,12 @@ export default function Input({value, maxValue,name, unit, label, onInputChange}
                             if (num > maxValue) num = maxValue;
                             if (!isNaN(num)) onInputChange(name, num);
                         }
-
                     }}
-                    />
-                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium pointer-events-none">
+                />
+                {/* Stylovaná jednotka vpravo */}
+                <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-100 text-slate-500 font-bold text-xs py-1.5 px-2.5 rounded-lg pointer-events-none select-none">
                     {unit}
-                </span>
+                </div>
             </div>
         </div>
     )

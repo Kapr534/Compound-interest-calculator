@@ -11,12 +11,14 @@ export default function Button({label, type = "button", onClick}: BtnProps) {
     return (
         <button
             key={label}
-            className={`w-full py-4 rounded-2xl font-bold text-sm uppercase tracking-wider transition-all active:scale-[0.98] 
+            className={`w-full py-4 rounded-xl font-bold text-sm uppercase tracking-widest transition-all duration-200 transform active:scale-[0.98] 
                 ${isSubmit
-                ? "bg-indigo-600 text-white shadow-lg shadow-indigo-200 hover:bg-indigo-700"
-                : "bg-slate-100 text-slate-600 hover:bg-slate-200"}`}
+                ? "bg-slate-900 text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800 hover:shadow-xl hover:shadow-slate-900/30"
+                : "bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 hover:text-slate-700 hover:border-slate-300"}`}
             type={type}
             onClick={onClick}
-        >{label}</button>
+        >
+            {label}
+        </button>
     )
 }
