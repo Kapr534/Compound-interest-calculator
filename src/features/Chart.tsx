@@ -55,7 +55,7 @@ export function CompoundInterestChart({ yearlyBreakDown }: ChartProps) {
                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
 
                     <XAxis
-                        height={45}
+                        height={65}
                         dataKey="year"
                         axisLine={false}
                         tickLine={false}

@@ -48,13 +48,8 @@ export default function App() {
             <div className="max-w-6xl w-full bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200 overflow-hidden border border-white/50 grid lg:grid-cols-12 relative">
 
                 {/* Left side - Form */}
-                <section className="lg:col-span-5 p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-slate-100 bg-white z-10">
+                <section className="lg:col-span-5 p-8 md:p-10 border-b lg:border-b-0 lg:border-r border-slate-100 bg-white z-10 mt-4">
                     <div className="mb-8">
-                        <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-teal-50 text-teal-600 mb-6">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-                            </svg>
-                        </div>
                         <h1 className="text-3xl font-bold text-slate-900 tracking-tight">Investiční kalkulačka</h1>
                         <p className="text-slate-500 mt-3 text-sm leading-relaxed">
                             Zadejte parametry své investice a zjistěte, jak může složené úročení zhodnotit vaše úspory v čase.
