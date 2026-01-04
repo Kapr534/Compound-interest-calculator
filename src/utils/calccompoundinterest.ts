@@ -22,7 +22,6 @@ export function calcCompoundInterest(
 
         yearlyBreakDown.push({
             year: currentYear + y,
-            total: Math.round(total),
             totalDeposit: Math.round(totalDeposit),
             totalInterest: Math.round(total - totalDeposit),
         })
@@ -36,3 +35,5 @@ export function calcCompoundInterest(
         yearlyBreakDown: yearlyBreakDown,
     }
 }
+
+console.log(calcCompoundInterest(100000, 5000, 5, 10))

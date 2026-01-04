@@ -2,6 +2,8 @@ import {useState} from 'react'
 import './styles/app.css'
 import CalculatorForm from "./features/CalculatorForm.tsx";
 import { calcCompoundInterest } from "./utils/calccompoundinterest.ts";
+import { CompoundInterestChart } from './features/Chart.tsx';
+import type { YearlyBreakDownData } from './features/Chart.tsx'
 
 export default function App() {
     const [inputValues, setInputValues] = useState({
@@ -13,7 +15,8 @@ export default function App() {
     const [calcValues, setCalcValues] = useState({
         total: 0,
         totalDeposit: 0,
-        totalInterest: 0
+        totalInterest: 0,
+        yearlyBreakDown: [] as YearlyBreakDownData[],
     })
 
     const onInputChange = (name: string, value: number) => {
@@ -31,7 +34,7 @@ export default function App() {
 
     const onClearBtnClick = () => {
         setInputValues({deposit: 0, monthlyAdded: 0, interestRate: 0, years: 0})
-        setCalcValues({total: 0, totalDeposit: 0,totalInterest: 0})
+        setCalcValues({total: 0, totalDeposit: 0,totalInterest: 0, yearlyBreakDown: []})
     };
 
 
@@ -74,6 +77,9 @@ export default function App() {
                                 <span className="text-green-600 font-bold text-lg">+{calcValues.totalInterest.toLocaleString('cs-CZ')} Kč</span>
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        <CompoundInterestChart yearlyBreakDown={calcValues.yearlyBreakDown}/>
                     </div>
                 </div>
 

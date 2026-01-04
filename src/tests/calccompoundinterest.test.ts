@@ -49,7 +49,6 @@ describe('calcCompoundInterest - yearlyBreakDown', () => {
         const result = calcCompoundInterest(5000, 500, 7, 10);
         const lastYear = result.yearlyBreakDown[result.yearlyBreakDown.length - 1];
 
-        expect(lastYear.total).toBe(result.total);
         expect(lastYear.totalDeposit).toBe(result.totalDeposit);
         expect(lastYear.totalInterest).toBe(result.totalInterest);
     });
