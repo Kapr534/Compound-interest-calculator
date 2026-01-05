@@ -11,7 +11,7 @@ Tento projekt je postaven na moderním Reactu s důrazem na typovou bezpečnost 
 
 * **Core:** [React](https://reactjs.org/), [TypeScript](https://www.typescriptlang.org/)
 * **Build Tool:** [Vite](https://vitejs.dev/)
-* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) (CSS & Layout vytvořeno AI, dělal jsem pouze menší úpravy)
 * **Vizualizace:** [Recharts](https://recharts.org/) (pro grafy vývoje úroků)
 * **Testování:** [Vitest](https://vitest.dev/) (Unit testy výpočetní logiky)
 
