@@ -38,7 +38,6 @@ export default function Input({value, maxValue,name, unit, label, onInputChange}
                         }
                     }}
                 />
-                {/* Stylovaná jednotka vpravo */}
                 <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-100 text-slate-500 font-bold text-xs py-1.5 px-2.5 rounded-lg pointer-events-none select-none">
                     {unit}
                 </div>

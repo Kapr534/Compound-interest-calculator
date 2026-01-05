@@ -50,7 +50,7 @@ export function CompoundInterestChart({ yearlyBreakDown }: ChartProps) {
                 <BarChart
                     data={yearlyBreakDown}
                     margin={{ top: 10, right: 10, left: 0, bottom: 0 }}
-                    barSize={12} // Užší sloupce pro elegantnější vzhled
+                    barSize={12}
                 >
                     <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
 
@@ -64,7 +64,7 @@ export function CompoundInterestChart({ yearlyBreakDown }: ChartProps) {
                     />
 
                     <YAxis
-                        width={65}
+                        width={70}
                         tickFormatter={(value) => formatCurrency(value)}
                         axisLine={false}
                         tickLine={false}
@@ -85,7 +85,6 @@ export function CompoundInterestChart({ yearlyBreakDown }: ChartProps) {
                         labelStyle={{ color: '#64748b', marginBottom: '8px', fontSize: '12px' }}
                     />
 
-                    {/* Skrytá defaultní legenda, protože máme vlastní nahoře */}
                     <Legend content={() => null} />
 
                     <Bar
@@ -100,7 +99,7 @@ export function CompoundInterestChart({ yearlyBreakDown }: ChartProps) {
                         stackId="a"
                         name="Získaný úrok"
                         fill="#14b8a6" // Teal-500
-                        radius={[4, 4, 0, 0]} // Zaoblení jen nahoře
+                        radius={[4, 4, 0, 0]}
                     />
                 </BarChart>
             </ResponsiveContainer>
