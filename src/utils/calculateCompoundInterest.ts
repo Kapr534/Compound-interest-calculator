@@ -1,13 +1,19 @@
 
 
-export function calcCompoundInterest(
+export interface YearlyBreakDownData {
+    year: number;
+    totalDeposit: number;
+    totalInterest: number;
+}
+
+export function calculateCompoundInterest(
     initialDeposit: number,
     addedMonthly: number,
     interestRate: number,
-    years: number
+    years: number,
+    currentYear: number = new Date().getFullYear(),
 ) {
     const monthlyRate: number = interestRate /100 / 12;
-    const currentYear: number = new Date().getFullYear();
 
     let total = initialDeposit;
     let totalDeposit = initialDeposit;
@@ -35,5 +41,3 @@ export function calcCompoundInterest(
         yearlyBreakDown: yearlyBreakDown,
     }
 }
-
-console.log(calcCompoundInterest(100000, 5000, 5, 10))

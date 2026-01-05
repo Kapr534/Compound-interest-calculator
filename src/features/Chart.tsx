@@ -8,13 +8,7 @@ import {
     Legend,
     ResponsiveContainer
 } from 'recharts';
-
-
-export interface YearlyBreakDownData {
-    year: number;
-    totalDeposit: number;
-    totalInterest: number;
-}
+import {YearlyBreakDownData} from "../utils/calculateCompoundInterest.ts";
 
 interface ChartProps{
     yearlyBreakDown: YearlyBreakDownData[];

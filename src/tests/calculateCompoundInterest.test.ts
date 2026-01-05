@@ -1,14 +1,14 @@
 import { expect, test, describe, it } from 'vitest';
-import { calcCompoundInterest } from "../utils/calccompoundinterest.ts";
+import { calculateCompoundInterest } from "../utils/calculateCompoundInterest.ts";
 
 
-describe('Function calcCompoundInterest', () => {
+describe('Function calculateCompoundInterest', () => {
     test('standard input', () => {
         const initialDeposit = 100000;
         const addedMonthly = 5000;
         const interestRate = 9.3;
         const years = 20;
-        const returned = calcCompoundInterest(initialDeposit, addedMonthly, interestRate, years);
+        const returned = calculateCompoundInterest(initialDeposit, addedMonthly, interestRate, years);
 
         expect(returned.total).toBe(4107358);
         expect(returned.totalDeposit).toBe(1300000);
@@ -16,37 +16,37 @@ describe('Function calcCompoundInterest', () => {
     });
 
     test('Should only return initialDeposit, interestRate = 0q, years = 0', () => {
-        const returned = calcCompoundInterest(1000, 500, 0, 0);
+        const returned = calculateCompoundInterest(1000, 500, 0, 0);
         expect(returned.total).toBe(1000);
         expect(returned.totalDeposit). toBe(1000);
         expect(returned.totalInterest).toBe(0);
     });
 });
 
-describe('calcCompoundInterest - yearlyBreakDown', () => {
+describe('calculateCompoundInterest - yearlyBreakDown', () => {
 
     it('Should return empty history', () => {
-        const result = calcCompoundInterest(1000, 100, 5, 0);
+        const result = calculateCompoundInterest(1000, 100, 5, 0);
         expect(result.yearlyBreakDown).toHaveLength(0);
     });
 
     it('should have the correct number of records in history', () => {
         const years = 5;
-        const result = calcCompoundInterest(1000, 100, 5, years);
+        const result = calculateCompoundInterest(1000, 100, 5, years);
         expect(result.yearlyBreakDown).toHaveLength(years);
     });
 
     it('Should generate the correct year', () => {
         const currentYear = new Date().getFullYear();
         const years = 3;
-        const { yearlyBreakDown } = calcCompoundInterest(1000, 100, 5, years);
+        const { yearlyBreakDown } = calculateCompoundInterest(1000, 100, 5, years);
 
         expect(yearlyBreakDown[0].year).toBe(currentYear + 1);
         expect(yearlyBreakDown[2].year).toBe(currentYear + 3);
     });
 
     it('the last year in history should correspond to the overall result', () => {
-        const result = calcCompoundInterest(5000, 500, 7, 10);
+        const result = calculateCompoundInterest(5000, 500, 7, 10);
         const lastYear = result.yearlyBreakDown[result.yearlyBreakDown.length - 1];
 
         expect(lastYear.totalDeposit).toBe(result.totalDeposit);
@@ -55,7 +55,7 @@ describe('calcCompoundInterest - yearlyBreakDown', () => {
 
     it('deposits should gradually increase over time', () => {
         const addedMonthly = 100;
-        const { yearlyBreakDown } = calcCompoundInterest(1000, addedMonthly, 5, 2);
+        const { yearlyBreakDown } = calculateCompoundInterest(1000, addedMonthly, 5, 2);
 
         const year1Deposit = yearlyBreakDown[0].totalDeposit;
         const year2Deposit = yearlyBreakDown[1].totalDeposit;

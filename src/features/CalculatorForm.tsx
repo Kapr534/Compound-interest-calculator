@@ -42,7 +42,7 @@ export default function CalculatorForm(props: CalculatorFormProps) {
     return (
         <form onSubmit={handleSubmit} className="flex flex-col gap-6">
             <div className="space-y-5">
-                {inputs.map(item => <Input key={item.name} {...item}/>)}
+                {inputs.map(input => <Input key={input.name} {...input}/>)}
             </div>
             <div className="flex flex-col gap-3 mt-4">
                 {btns.map(btn => <Button key={btn.label} {...btn} />)}

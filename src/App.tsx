@@ -1,9 +1,9 @@
 import {useState} from 'react'
 import './styles/app.css'
 import CalculatorForm from "./features/CalculatorForm.tsx";
-import { calcCompoundInterest } from "./utils/calccompoundinterest.ts";
+import { calculateCompoundInterest } from "./utils/calculateCompoundInterest.ts";
 import { CompoundInterestChart } from './features/Chart.tsx';
-import type { YearlyBreakDownData } from './features/Chart.tsx'
+import type { YearlyBreakDownData } from './utils/calculateCompoundInterest.ts'
 
 export default function App() {
     const [inputValues, setInputValues] = useState({
@@ -24,7 +24,7 @@ export default function App() {
     }
 
     const onSubmitBtnClick = () => {
-        const newCalcValues = calcCompoundInterest(
+        const newCalcValues = calculateCompoundInterest(
             inputValues.deposit,
             inputValues.monthlyAdded,
             inputValues.interestRate,

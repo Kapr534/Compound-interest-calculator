@@ -10,7 +10,6 @@ export default function Button({label, type = "button", onClick}: BtnProps) {
 
     return (
         <button
-            key={label}
             className={`w-full py-4 rounded-xl font-bold text-sm uppercase tracking-widest transition-all duration-200 transform active:scale-[0.98] 
                 ${isSubmit
                 ? "bg-slate-900 text-white shadow-lg shadow-slate-900/20 hover:bg-slate-800 hover:shadow-xl hover:shadow-slate-900/30"
