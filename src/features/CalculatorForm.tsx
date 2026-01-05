@@ -3,7 +3,7 @@ import Button from "../components/Button.tsx";
 import type {BtnProps} from "../components/Button.tsx";
 import Input from "../components/Input.tsx";
 import type {InputProps} from "../components/Input.tsx";
-import '../styles/calculatorform.css'
+import '../styles/index.css';
 
 interface CalculatorFormProps {
     onSubmitBtnClick: () => void;

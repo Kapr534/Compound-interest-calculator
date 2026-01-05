@@ -1,9 +1,9 @@
-import {useState} from 'react'
-import './styles/app.css'
+import {useState} from 'react';
+import './styles/index.css';
 import CalculatorForm from "./features/CalculatorForm.tsx";
 import { calculateCompoundInterest } from "./utils/calculateCompoundInterest.ts";
 import { CompoundInterestChart } from './features/Chart.tsx';
-import type { YearlyBreakDownData } from './utils/calculateCompoundInterest.ts'
+import type { YearlyBreakDownData } from './utils/calculateCompoundInterest.ts';
 
 export default function App() {
     const [inputValues, setInputValues] = useState({
