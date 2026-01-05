@@ -17,14 +17,6 @@ Tento projekt je postaven na moderním Reactu s důrazem na typovou bezpečnost 
 
   ![Test Screenshot](./public/test.png)
 
-## Klíčové Vlastnosti
-
-* **Okamžitý výpočet:** Reaktivní formulář, který přepočítává výsledky v reálném čase.
-* **Interaktivní grafy:** Sloupcový graf zobrazující poměr vkladu vs. získaného úroku v čase.
-* **Responzivní design:** Plně optimalizováno pro mobily i desktop (využívá Tailwind grid a flexbox).
-* **Formátování měny:** Automatické formátování českých korun (CZK) a velkých čísel.
-* **Unit Testy:** Výpočetní logika (`calculateCompoundInterest`) je pokryta automatickými testy.
-
 📂 Struktura projektu
 Architektura je rozdělena podle funkcionality pro lepší škálovatelnost.
 
