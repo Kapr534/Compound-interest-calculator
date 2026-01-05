@@ -34,6 +34,6 @@ src/
 ├── components/     # UI primitivy (Button, Input)
 ├── utils/          # Čisté funkce pro výpočty
 ├── test/           # Testy
-├── App.tsx/        # Wrapper pro Main.tsx
-└── Main.tsx/       # Co nejkratší
+├── App.tsx         # Wrapper pro Main.tsx
+└── Main.tsx        # Co nejkratší
 ```
