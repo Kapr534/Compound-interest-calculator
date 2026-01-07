@@ -5,7 +5,7 @@ Moderní webová aplikace pro výpočet složeného úročení s vizualizací v 
 ![App Screenshot](./public/app.png)
 
 ##  Live Demo
-👉 **[Investiční kalkulačka)]([https://kalkulackainvestic.netlify.app/](https://investicni-kalkulacka.vercel.app/)**
+👉 **[Investiční kalkulačka)](https://kalkulackainvestic.netlify.app/)**
 ## Použité Technologie
 Tento projekt je postaven na moderním Reactu s důrazem na typovou bezpečnost a čisté UI.
 
